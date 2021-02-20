@@ -33,6 +33,7 @@ const Message = (props) => {
 		loaded: false,
 	});
 	const [message, setMessage] = useState({
+		id: "",
 		title: "",
 		message: "",
 		url: "",
@@ -95,6 +96,7 @@ const Message = (props) => {
 			.then((response) => response.json())
 			.then((resp_items) => {
 				setMessage({
+					id: Object.values(resp_items)[0].id,
 					title: storedTitle,
 					message: Object.values(resp_items)[0].Message,
 					url: Object.values(resp_items)[0].url,
@@ -122,6 +124,7 @@ const Message = (props) => {
 			.then((response) => response.json())
 			.then((resp_items) => {
 				setMessage({
+					id: Object.values(resp_items)[0].id,
 					title: e.target[index].text,
 					message: Object.values(resp_items)[0].Message,
 					url: Object.values(resp_items)[0].url,
@@ -143,8 +146,11 @@ setDeleteOnClick(childProps)
 	const sendingmessages = () => {
 		const send_contacts = []
 		const send_names = []
-		const send_img = `http://localhost:5000/images/${selectID.id}`
 		const send_msg = message.message
+		const send_img = `http://localhost:5000/images/${selectID.id}`
+		const send_temp_name = message.title
+		const send_temp_id = message.id
+
 		const send_url = message.url
 
 		const listOfContacts = contacts[0].contacts.items
@@ -161,7 +167,9 @@ setDeleteOnClick(childProps)
 				api_numbers: send_contacts,
 				api_names: send_names,
 				api_msg: send_msg,
-				api_url: send_url
+				api_url: send_url,
+				api_title: send_temp_name,
+				api_id: send_temp_id
 
 			}),
 			headers: {
@@ -253,13 +261,7 @@ setDeleteOnClick(childProps)
 
 
 					{/* Delete message component */}
-					<div
-						// style={
-						// 	deleteOnClick
-						// 		? { visibility: "visible" }
-						// 		: { visibility: "hidden" }
-						// }>
-						>
+					<div>
 						<DeleteMessageComponent
 							selected={selectID.id}
 							cond={deleteOnClick}
