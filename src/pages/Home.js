@@ -10,7 +10,7 @@ const Home = (props) => {
 	const submit = (e) => {
 		e.preventDefault();
 
-		fetch("http://localhost:5000/login", {
+		fetch("http://devorii.pythonanywhere.com/login", {
 			method: "POST",
 			body: JSON.stringify({ user }),
 			mode: "cors",
@@ -22,7 +22,8 @@ const Home = (props) => {
 			.then((res) => res.json())
 			.then((json) => {
 				if (json.status === 200) {
-					const token = String(json.token).substring(2, 118);
+					// const token = String(json.token).substring(2, 118);
+					const token = String(json.token).substring(2,118)
 					Cookies.set("token", token, { expires: 1 });
 					window.location = "http://localhost:3000/dashboard";
 				} else {

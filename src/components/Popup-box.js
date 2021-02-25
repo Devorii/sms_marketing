@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Cookies from "js-cookie";
 
 
@@ -14,7 +14,7 @@ const PopupModal = (props) =>{
     const submit = e => {
         e.preventDefault()
 
-        fetch(`http://localhost:5000/update-contacts/${props.id}`,{
+        fetch(`http://devorii.pythonanywhere.com/update-contacts/${props.id}`,{
             method: 'PUT',
             body: JSON.stringify({ user }),
             mode: 'cors',
@@ -37,7 +37,7 @@ const PopupModal = (props) =>{
     const deleteBtn = e => {
         e.preventDefault()
 
-        fetch(`http://localhost:5000/delete-contacts/${props.id}`,{
+        fetch(`http://devorii.pythonanywhere.com/delete-contacts/${props.id}`,{
             method: 'DELETE',
             mode: 'cors',
             headers: {
@@ -98,7 +98,6 @@ const PopupModal = (props) =>{
 
 			</form>
             </div>
-            {/* <input id='close-btn' value='close' type='button'></input> */}
 		</div>
 
         </>

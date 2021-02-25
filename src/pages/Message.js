@@ -64,7 +64,7 @@ const Message = (props) => {
 	useEffect(() => {
 		var storedTitle;
 
-		fetch("http://localhost:5000/onload-messages", {
+		fetch("http://devorii.pythonanywhere.com/onload-messages", {
 			method: "GET",
 			mode: "cors",
 			headers: {
@@ -81,7 +81,7 @@ const Message = (props) => {
 				storedTitle = Object.values(items)[0].title;
 
 				return fetch(
-					`http://localhost:5000/template/${Object.values(items)[0].id}`,
+					`http://devorii.pythonanywhere.com/template/${Object.values(items)[0].id}`,
 					{
 						method: "GET",
 						mode: "cors",
@@ -112,7 +112,7 @@ const Message = (props) => {
 
 		setSelectID({ id: selection_id, loaded: true });
 
-		fetch(`http://localhost:5000/template/${selection_id}`, {
+		fetch(`http://devorii.pythonanywhere.com/template/${selection_id}`, {
 			method: "GET",
 			mode: "cors",
 			headers: {
@@ -136,8 +136,6 @@ const Message = (props) => {
 	// Deleting selection
 	const deleteSelected = () => {
 		setDeleteOnClick('openDelete')
-
-		// fetch(`http://localhost:5000/delete-messages/${selection_id}`,{
 	};
 const updateParentState = (childProps) =>{
 setDeleteOnClick(childProps)
@@ -147,7 +145,7 @@ setDeleteOnClick(childProps)
 		const send_contacts = []
 		const send_names = []
 		const send_msg = message.message
-		const send_img = `http://localhost:5000/images/${selectID.id}`
+		const send_img = `http://devorii.pythonanywhere.com/images/${selectID.id}`
 		const send_temp_name = message.title
 		const send_temp_id = message.id
 
@@ -160,7 +158,7 @@ setDeleteOnClick(childProps)
 		})
 
 		console.log(send_contacts)
-		fetch(`http://localhost:5000/send-messages`, {
+		fetch(`http://devorii.pythonanywhere.com/send-messages`, {
 			method: 'POST',
 			mode: 'cors',
 			body: JSON.stringify({
@@ -168,6 +166,7 @@ setDeleteOnClick(childProps)
 				api_names: send_names,
 				api_msg: send_msg,
 				api_url: send_url,
+				api_img: send_img,
 				api_title: send_temp_name,
 				api_id: send_temp_id
 
@@ -230,8 +229,8 @@ setDeleteOnClick(childProps)
 									className='displayImg'
 									src={
 										selectID.loaded
-											? `http://localhost:5000/images/${selectID.id}`
-											: `http://localhost:5000/images/4`
+											? `http://devorii.pythonanywhere.com/images/${selectID.id}`
+											: `http://devorii.pythonanywhere.com/images/4`
 									}
 									alt='content_image'
 								/>
