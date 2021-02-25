@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/sms_marketing/static/css/main.e70a2b08.chunk.css",
+    "main.js": "/sms_marketing/static/js/main.635735a7.chunk.js",
+    "main.js.map": "/sms_marketing/static/js/main.635735a7.chunk.js.map",
+    "runtime-main.js": "/sms_marketing/static/js/runtime-main.f4a7bc98.js",
+    "runtime-main.js.map": "/sms_marketing/static/js/runtime-main.f4a7bc98.js.map",
+    "static/js/2.384de46e.chunk.js": "/sms_marketing/static/js/2.384de46e.chunk.js",
+    "static/js/2.384de46e.chunk.js.map": "/sms_marketing/static/js/2.384de46e.chunk.js.map",
+    "static/js/3.dfb43d0f.chunk.js": "/sms_marketing/static/js/3.dfb43d0f.chunk.js",
+    "static/js/3.dfb43d0f.chunk.js.map": "/sms_marketing/static/js/3.dfb43d0f.chunk.js.map",
+    "index.html": "/sms_marketing/index.html",
+    "static/css/main.e70a2b08.chunk.css.map": "/sms_marketing/static/css/main.e70a2b08.chunk.css.map",
+    "static/js/2.384de46e.chunk.js.LICENSE.txt": "/sms_marketing/static/js/2.384de46e.chunk.js.LICENSE.txt",
+    "static/media/contact.31bd4c24.svg": "/sms_marketing/static/media/contact.31bd4c24.svg",
+    "static/media/create.5b9a4759.svg": "/sms_marketing/static/media/create.5b9a4759.svg",
+    "static/media/createContacts.95efcd9d.svg": "/sms_marketing/static/media/createContacts.95efcd9d.svg",
+    "static/media/createContactsClose.c7ab2163.svg": "/sms_marketing/static/media/createContactsClose.c7ab2163.svg",
+    "static/media/delete.51e9d24b.svg": "/sms_marketing/static/media/delete.51e9d24b.svg",
+    "static/media/orii.fb0048a1.svg": "/sms_marketing/static/media/orii.fb0048a1.svg",
+    "static/media/profile.557905a5.svg": "/sms_marketing/static/media/profile.557905a5.svg",
+    "static/media/send.62a8b34e.svg": "/sms_marketing/static/media/send.62a8b34e.svg",
+    "static/media/sms.a3c02d42.svg": "/sms_marketing/static/media/sms.a3c02d42.svg",
+    "static/media/template.6068d364.svg": "/sms_marketing/static/media/template.6068d364.svg",
+    "static/media/update.04f4b030.svg": "/sms_marketing/static/media/update.04f4b030.svg",
+    "static/media/wave.c1be5a36.png": "/sms_marketing/static/media/wave.c1be5a36.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4a7bc98.js",
+    "static/js/2.384de46e.chunk.js",
+    "static/css/main.e70a2b08.chunk.css",
+    "static/js/main.635735a7.chunk.js"
+  ]
+}
