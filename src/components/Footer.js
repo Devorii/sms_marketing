@@ -13,9 +13,6 @@ return(
             <Link to='/contacts'>
             <input className='footerIcons' type="image" src={Contact} />
             </Link>
-            {/* <Link to='/send-message'>
-            <input className='footerIcons' type="image" src={Blast} />
-            </Link> */}
             <Link to='/messages'>
             <input className='footerIcons' type="image" src={Template} />
             </Link>

@@ -12,7 +12,7 @@ const FormModal = (props) => {
     const submit = e =>{
         e.preventDefault();
 
-        fetch('http://localhost:5000/create-contact',{
+        fetch('http://devorii.pythonanywhere.com/create-contact',{
             method: 'POST',
             body: JSON.stringify({ user }),
             mode: 'cors',
@@ -64,7 +64,6 @@ const FormModal = (props) => {
 				<input id='submit-btn' type='submit' value='Create Contact'></input>
 			</form>
             </div>
-            {/* <input id='close-btn' value='close' type='button'></input> */}
 		</div>
         </>
 	);

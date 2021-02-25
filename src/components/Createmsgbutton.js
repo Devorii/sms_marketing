@@ -26,9 +26,6 @@ const CreateMsgbutton = (props) => {
     const openNow = () => {
         setToggle(!toggle)
         console.log(toggle)
-        // if(stats.state === 'false'){}
-        // setopenModal({style:{display: 'flex', justifyContent: "center", margin: '0px' }})
-        // console.log(openModal)
     }
 
 
@@ -43,8 +40,6 @@ const CreateMsgbutton = (props) => {
         :
         <img className='create-btn' src={CreateMessageIcon} alt='create-message' onClick={ openNow } />
         }
-
-			{/* <button style={{color: '#100D84'}} onClick={ openNow } className='create-btn'>{toggle ? 'Close': 'Create New Message'}</button> */}
 		</>
 	);
 };

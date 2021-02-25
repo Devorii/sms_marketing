@@ -20,8 +20,7 @@ if(Cookies.get('token') === undefined){
         <>
 			<h4 className='pagetitle pageDesc'><b>Settings</b></h4>
 			<div className='page_greeting'>
-			<h2 className='pageDesc'>Your Number</h2>
-			<h2 className='pageDesc'>+1 234 567 2345</h2>
+			<h2 className='pageDesc'>Beta Version 0.1</h2>
 			</div>
 
             {/* Navigation and settings */}
@@ -29,6 +28,11 @@ if(Cookies.get('token') === undefined){
                 <Link to='/dashboard'>
                     <div>
                     <h5 style={{color: 'black'}}>Dashboard</h5>
+                    </div>
+                </Link>
+                <Link to='/feedback'>
+                    <div>
+                    <h5 style={{color: 'black'}}>We want your feedback </h5>
                     </div>
                 </Link>
                 <Link to='#'>

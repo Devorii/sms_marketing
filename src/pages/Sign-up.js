@@ -19,7 +19,7 @@ const Signup = props => {
                 console.log('password dont match')
             )
         }else{
-            fetch('http://localhost:5000/sign-up', {
+            fetch('http://devorii.pythonanywhere.com/sign-up', {
                 method: 'POST',
                 body: JSON.stringify({
                         'name': signupUser.name,

@@ -129,6 +129,14 @@ width: 250px;
   color: white;
   margin: 20px 0px 0px 0%;
 }
+a#submit-btn{
+  background-color: rgb(2, 68, 174);
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  color: white;
+}
 #submit-btn-update{
   background-color: rgb(2, 68, 174);
   border: none;

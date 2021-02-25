@@ -1,8 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
-import CreateMsgbutton from "./Createmsgbutton";
-import { useForm } from "react-hook-form";
-import { formdata } from "form-data";
 
 const UpdateMessages = (props) => {
 	const [message, setmessage] = useState();
@@ -21,7 +18,6 @@ const UpdateMessages = (props) => {
 			url: props.url,
 			loaded: true,
 		});
-		// console.log(props)
 	}, [props]);
 
 	const onSubmit = (e) => {
@@ -33,7 +29,7 @@ const UpdateMessages = (props) => {
 		formdata.append("url", message.url);
 		formdata.append("image", message.image, `${message.image.name}`);
 
-		fetch(`http://127.0.0.1:5000/update-messages/${props.id}`, {
+		fetch(`http://devorii.pythonanywhere.com/update-messages/${props.id}`, {
 			method: "PUT",
 			mode: "cors",
 			headers: {
@@ -49,7 +45,6 @@ const UpdateMessages = (props) => {
 
 	return (
 		<>
-			{/* <div  className='bg_blur'></div> */}
 			<div className='form_modal_wrapper'>
 				<div>
 					{
@@ -99,6 +94,7 @@ const UpdateMessages = (props) => {
 							name='image'
 							id='file'
 							type='file'
+							accept="image/jpeg"
 							onChange={(e) =>
 								setmessage({ ...message, image: e.target.files[0] })
 							}
@@ -106,7 +102,6 @@ const UpdateMessages = (props) => {
 						<input id='submit-btn' type='submit' value='Update Message'></input>
 					</form>
 				</div>
-				{/* <input id='close-btn' value='close' type='button'></input> */}
 			</div>
 		</>
 	);

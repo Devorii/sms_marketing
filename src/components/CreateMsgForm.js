@@ -1,8 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 import Cookies from "js-cookie";
-import CreateMsgbutton from "./Createmsgbutton";
-import { useForm } from "react-hook-form";
-import { formdata } from "form-data";
 
 const CreateMsgForm = (props) => {
 	const [message, setmessage] = useState();
@@ -21,7 +18,7 @@ const CreateMsgForm = (props) => {
 		formdata.append("image", message.image,`${message.image.name}`);
 
 
-		fetch("http://127.0.0.1:5000/create-message", {
+		fetch("http://devorii.pythonanywhere.com/create-message", {
 			method: "POST",
 			mode: "cors",
 			headers: {
@@ -37,7 +34,6 @@ const CreateMsgForm = (props) => {
 
 	return (
 		<>
-			{/* <div  className='bg_blur'></div> */}
 			<div className='form_modal_wrapper'>
 				<div>
 					{
@@ -83,6 +79,7 @@ const CreateMsgForm = (props) => {
 							name='image'
 							id='file'
 							type='file'
+							accept="image/jpeg"
 							onChange={(e) =>
 								setmessage({ ...message, image: e.target.files[0] })
 							}
@@ -90,7 +87,6 @@ const CreateMsgForm = (props) => {
 						<input id='submit-btn' type='submit' value='Create Contact'></input>
 					</form>
 				</div>
-				{/* <input id='close-btn' value='close' type='button'></input> */}
 			</div>
 		</>
 	);
